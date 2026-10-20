@@ -2,14 +2,14 @@
 
 A modern, full-stack e-commerce platform built with React and Django REST Framework, featuring a complete admin dashboard, product management, order processing, and customer-facing storefront.
 
-## 🚀 Project Overview
+## Project Overview
 
 Izaar is a comprehensive e-commerce solution with:
 - **Frontend**: Modern React SPA with TypeScript, TailwindCSS, and Radix UI
 - **Backend**: Django REST Framework API with PostgreSQL
 - **Features**: Product catalog, shopping cart, checkout, order management, admin dashboard, search, coupons, and more
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 front/
@@ -24,7 +24,7 @@ front/
     └── media/          # Uploaded media files
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18** with TypeScript
@@ -42,41 +42,41 @@ front/
 - **Pillow** for image processing
 - **django-cors-headers** for CORS handling
 
-## 📋 Features
+## Features
 
 ### Customer Features
-- ✅ Product browsing and search
-- ✅ Category navigation
-- ✅ Product details with images, sizes, and colors
-- ✅ Shopping cart with persistent storage
-- ✅ Wishlist functionality
-- ✅ Checkout process with shipping calculation
-- ✅ Order confirmation
-- ✅ Responsive design (mobile-first)
-- ✅ Arabic language support (RTL)
+- Product browsing and search
+- Category navigation
+- Product details with images, sizes, and colors
+- Shopping cart with persistent storage
+- Wishlist functionality
+- Checkout process with shipping calculation
+- Order confirmation
+- Responsive design (mobile-first)
+- Arabic language support (RTL)
 
 ### Admin Features
-- ✅ Admin authentication and authorization
-- ✅ Dashboard with statistics
-- ✅ Product management (CRUD)
-- ✅ Category management
-- ✅ Order management and status tracking
-- ✅ Customer management
-- ✅ Reports and analytics
-- ✅ Search management
-- ✅ Settings configuration
-- ✅ Product ordering/drag-and-drop
+- Admin authentication and authorization
+- Dashboard with statistics
+- Product management (CRUD)
+- Category management
+- Order management and status tracking
+- Customer management
+- Reports and analytics
+- Search management
+- Settings configuration
+- Product ordering/drag-and-drop
 
 ### Additional Features
-- ✅ Coupon/discount code system
-- ✅ Shipping zones and cost calculation
-- ✅ Product reviews system
-- ✅ Banner management
-- ✅ Announcement bar
-- ✅ Quantity-based offers
-- ✅ Search functionality with fuzzy matching
+- Coupon/discount code system
+- Shipping zones and cost calculation
+- Product reviews system
+- Banner management
+- Announcement bar
+- Quantity-based offers
+- Search functionality with fuzzy matching
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js** v18 or higher
@@ -159,7 +159,7 @@ python manage.py runserver 8000
 
 The API will be available at `http://localhost:8000/api/`
 
-## 📚 Documentation
+## Documentation
 
 ### Frontend Documentation
 See [izaar/README.md](izaar/README.md) for detailed frontend documentation.
@@ -171,7 +171,7 @@ See [backend/README.md](backend/README.md) for detailed backend documentation, i
 - Authentication
 - Deployment guide
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Public Endpoints
 - `GET /api/products/` - List all products
@@ -190,13 +190,13 @@ See [backend/README.md](backend/README.md) for detailed backend documentation, i
 - `PUT /api/products/{slug}/` - Update product
 - And more... (see backend README)
 
-## 🗂️ Branch Structure
+## Branch Structure
 
 This repository uses two main branches:
 - **`front`** - Contains all frontend code (React application)
 - **`back`** - Contains all backend code (Django application)
 
-## 🧪 Development
+## Development
 
 ### Frontend Scripts
 - `pnpm dev` - Start development server
@@ -211,7 +211,7 @@ This repository uses two main branches:
 - `python manage.py migrate` - Apply migrations
 - `python manage.py test` - Run tests
 
-## 🚢 Deployment
+## Deployment
 
 ### Frontend Deployment
 The frontend can be deployed to:
@@ -228,17 +228,12 @@ The backend should be deployed to:
 
 See backend README for detailed deployment instructions.
 
-## 📝 License
+## License
 
 Private project - All rights reserved
 
-## 📞 Contact
+## Contact
 
 - **WhatsApp**: 01204437575
 - **Facebook**: [Izaar إزار](https://www.facebook.com/profile.php?id=61585790939558)
 - **Email**: help@izaar.com
-
-## 🙏 Acknowledgments
-
-Built with modern web technologies and best practices for a scalable, maintainable e-commerce platform.
-
