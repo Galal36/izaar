@@ -1,6 +1,9 @@
 """
 Script to initialize the database with sample data for development
 Run with: python manage.py shell < init_db.py
+
+Set ADMIN_PASSWORD (and optionally ADMIN_USERNAME / ADMIN_EMAIL) in the
+environment to also create an admin user.
 """
 
 import os
@@ -15,15 +18,12 @@ from store.models import (
 )
 from django.contrib.auth.hashers import make_password
 
-def init_database():
-    print("Initializing database with sample data...")
-    
-    # Create admin user
+def create_admin(password):
     print("\nCreating admin user...")
     admin, created = AdminUser.objects.get_or_create(
-        username='admin',
+        username=os.environ.get('ADMIN_USERNAME', 'admin'),
         defaults={
-            'email': 'admin@gmail.com',
+            'email': os.environ.get('ADMIN_EMAIL', 'admin@example.com'),
             'full_name_ar': 'المدير الرئيسي',
             'role': 'super_admin',
             'is_staff': True,
@@ -32,12 +32,23 @@ def init_database():
         }
     )
     if created:
-        admin.set_password('13579A')
+        admin.set_password(password)
         admin.save()
-        print(f"Admin user created: {admin.email} / 13579A")
+        print(f"Admin user created: {admin.email}")
     else:
         print(f"Admin user already exists: {admin.email}")
+
+
+def init_database():
+    print("Initializing database with sample data...")
     
+    # Create admin user
+    admin_password = os.environ.get('ADMIN_PASSWORD')
+    if not admin_password:
+        print("\nSkipping admin user: set ADMIN_PASSWORD to create one.")
+    else:
+        create_admin(admin_password)
+
     # Create categories
     print("\nCreating categories...")
     categories_data = [
@@ -113,9 +124,6 @@ def init_database():
             print(f"Created setting: {setting.key}")
     
     print("\nDatabase initialization complete!")
-    print("\nAdmin credentials:")
-    print("   Email: admin@gmail.com")
-    print("   Password: 13579A")
 
 if __name__ == '__main__':
     init_database()
