@@ -31,7 +31,7 @@ pnpm dev
 ```
 
 The application will be available at http://localhost:8080
-
+..
 ### Available Scripts
 
 - `pnpm dev` - Start development server (Vite + Express on port 8080)
